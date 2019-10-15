@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,15 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class AppComponent {
   title = 'neighbor-forms';
-  constructor(private afs: AngularFirestore) { }
+  items: Observable<any[]>;
 
+/*
+  constructor(db: AngularFirestore, private afs: AngularFirestore) { 
+    this.items = db.collection('items').valueChanges();
+  }
+*/
+
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('items').valueChanges();
+  }
 }

@@ -505,6 +505,14 @@
     </a>
   </div>
 
+
+<ul>
+  <li *ngFor="let item of items | async">
+     {{ item.name }}
+  </li>
+</ul>
+
+
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;
