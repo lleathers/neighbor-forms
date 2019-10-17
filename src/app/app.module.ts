@@ -15,8 +15,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 // import { firebase } from '../environments/environment';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -26,7 +26,7 @@ import { MatChipsModule } from '@angular/material/chips';
 
 
 import { SubmitFormComponent } from './submit-form/submit-form.component';
-
+import { ValidFormComponent } from './valid-form/valid-form.component';
 
 
 const yourFirebaseConfig = {
@@ -42,7 +42,8 @@ const yourFirebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    SubmitFormComponent
+    SubmitFormComponent,
+    ValidFormComponent
   ],
   imports: [
     BrowserModule,

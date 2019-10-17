@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "neighbor-f6e69": {
+      "hosting": {
+        "neighbor-forms": [
+          "neighbor-f6e69"
+        ]
+      }
+    }
+  }
+}
