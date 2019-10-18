@@ -68,9 +68,11 @@
 
     <hr>
 
-    <button mat-raised-button [disabled]="myForm.invalid || loading" color="primary">Let's Do it!</button>
+    <button mat-raised-button [disabled]="myForm.invalid || false" color="primary">Let's Do it!</button>
 
-
+<!--
+instead of false, lets figure out how to get document.readyState value to be computed in the OR with myForm.invalid
+-->
 
 
 </form>
