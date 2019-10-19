@@ -12,12 +12,14 @@
   <style media="screen">
      body { background-color: #f7f7f7; font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-     .toolbarmobile {visibility: hidden; }
+     /*  .toolbarmobile { visibility: hidden; } */ 
  
      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        .toolbar { visibility: hidden; } 
-        .toolbarmobile { visibility: visible; }
+        body { padding: 0px; }
+        #message { margin-top: 0; background: white; box-shadow: none; max-width: 100%; padding: 32px 24px; } 
+        /* .toolbar { visibility: hidden; } */
+        /* .toolbar { display: none; } */
+         .toolbarmobile { visibility: visible; }  
      } 
   </style>
 

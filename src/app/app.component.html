@@ -36,7 +36,8 @@
 
   .toolbar, .toolbarmobile {
     height: 60px;
-    margin: -8px;
+    /* margin: -8px; */
+    margin: 0px;
     display: flex;
     align-items: center;
     background-color: #1976d2;
@@ -45,12 +46,13 @@
   }
 
   .toolbar, .toolbarmobile img {
-    margin: 0 16px;
+     /* margin: 0 16px; */
+     margin 0 0px;
   }
 
   .toolbar, .toolbarmobile #twitter-logo {
     height: 40px;
-    margin: 0 16px;
+    margin: 0 0px;
   }
 
   .toolbar, .toolbarmobile #twitter-logo:hover {
@@ -295,7 +297,13 @@
   }
 </style>
 
+
+
 <!-- Toolbar -->
+
+
+<!--
+
 <div class="toolbar" role="banner">
 
 <img
@@ -329,11 +337,9 @@
   </a> 
 
 
-
 </div>
 
-
-<div id="message">
+-->
 
 
 <div class="toolbarmobile" role="banner">
@@ -370,10 +376,13 @@
   </a> 
 
 
-</div> <!-- End of TOOLBARMOBILE -->
+</div>
 
 
+ <!-- End of TOOLBARMOBILE -->
 
+
+<div id="message">
 
 <div class="content" role="main">
 
@@ -435,6 +444,8 @@
 
 </main>
 
+
 </div> <!-- End of MESSAGE -->
+
 
 <router-outlet></router-outlet>
