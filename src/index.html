@@ -238,7 +238,7 @@ function createPopUp(currentFeature) {
 
   var popup = new mapboxgl.Popup({ closeOnClick: false })
     .setLngLat(currentFeature.geometry.coordinates)
-    .setHTML('<h3>Sweetgreen</h3>' +
+    .setHTML('<h3>Deliver Healthy</h3>' +
       '<h4>' + currentFeature.properties.address + '</h4>')
     .addTo(map);
 }
