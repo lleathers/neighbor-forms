@@ -10,6 +10,10 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'neighbor-forms';
   items: Observable<any[]>;
+  dismissDialogToIcon: boolean = false;
+
+dismissDialog() { this.dismissDialogToIcon = true; }
+dismissRecoverTab() { this.dismissDialogToIcon = false; }
 
 /*
   constructor(db: AngularFirestore, private afs: AngularFirestore) { 
