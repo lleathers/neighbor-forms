@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-
+import { auth } from 'firebase/app';
 
 
 const yourFirebaseConfig = {
@@ -88,7 +89,16 @@ export class AppComponent {
   dismissRecoverTab() { this.dismissDialogToIcon = false; }
 
 
-  constructor(db: AngularFirestore) {
+  constructor(public afAuth: AngularFireAuth, db: AngularFirestore) {
     this.items = db.collection('items').valueChanges();
   }
+
+  login() {
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  }
+ 
+  logout() {
+    this.afAuth.auth.signOut();
+  }
+
 }

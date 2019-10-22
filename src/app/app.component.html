@@ -470,7 +470,20 @@
 <button (click)="dismissDialog()">Touch to search</button>
 
 
+<!--Debug writing to Firestore -->
+<!--
 <button (click)="trigger()">Create markers</button>
+-->
+
+<div *ngIf="afAuth.user | async as user; else showLogin">
+  <h1>Hi, {{ user.displayName }}!</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<ng-template #showLogin>
+  <p>Please login to publish marker.</p>
+  <button (click)="login()">Login with Google</button>
+</ng-template>
 
 
 <!--
