@@ -15,7 +15,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-// import { firebase } from '../environments/environment';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -37,6 +36,7 @@ const yourFirebaseConfig = {
   storageBucket: "neighbor-f6e69.appspot.com",
   messagingSenderId: "681260542654"
 };
+
 
 
 @NgModule({
