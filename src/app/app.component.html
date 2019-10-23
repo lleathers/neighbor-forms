@@ -7,6 +7,21 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+
+<!--
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script>
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+</script>
+-->
+
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -466,24 +481,43 @@
 
 -->
 
+  <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+
+<!--
+    <h1>Welcome to My Awesome App</h1>
+    <div id="firebaseui-auth-container"></div>
+-->
+
 
 <button (click)="dismissDialog()">Touch to search</button>
 
+<button onclick="signOut()">Sign out</button>
+
+
+
+
+<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
 <!--Debug writing to Firestore -->
 <!--
 <button (click)="trigger()">Create markers</button>
 -->
 
+<!--
+
 <div *ngIf="afAuth.user | async as user; else showLogin">
   <h1>Hi, {{ user.displayName }}!</h1>
   <button (click)="logout()">Logout</button>
 </div>
 
+
 <ng-template #showLogin>
   <p>Please login to publish marker.</p>
   <button (click)="login()">Login with Google</button>
 </ng-template>
+
+-->
 
 
 <!--
